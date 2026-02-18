@@ -1,0 +1,22 @@
+/* style.css – on utilise tes palettes */
+:root {
+  /* Palette Pride (exemple) */
+  --c1: #E40303;
+  --c2: #FF8C00;
+  --c3: #FFED00;
+  --c4: #008026;
+  --c5: #004CFF;
+  --c6: #732982;
+}
+/* Exemple : palette Bisexual */
+[data-palette="bisexual"] {
+  --c1: #D60270;
+  --c2: #9B4F96;
+  --c3: #0038A8;
+}
+/* Styles de base */
+body {font-family: Arial, sans-serif; margin:0; padding:1rem;}
+.hidden {display:none;}
+#preview {border:2px solid var(--c5); padding:1rem; margin-top:1rem;}
+.code {background:#f5f5f5; padding:.5rem; overflow:auto;}
+.explain {margin-top:.5rem; font-style:italic;}

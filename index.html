@@ -1,0 +1,31 @@
+<!-- index.html (déjà présent dans ton repo) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>CCS – Les Contes Codés de Stacy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="welcome">
+    <h1>Bienvenue dans CCS</h1>
+    <button id="startBtn">Commencer l’aventure</button>
+  </section>
+
+  <section id="lesson" class="hidden">
+    <h2 id="lessonTitle"></h2>
+
+    <!-- Zone où le code sera injecté -->
+    <pre id="codeBlock" class="code"></pre>
+    <button id="runBtn">Exécuter</button>
+
+    <!-- Résultat live -->
+    <div id="preview" class="preview"></div>
+
+    <!-- Explication -->
+    <p id="explanation" class="explain"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
