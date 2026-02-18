@@ -19,22 +19,24 @@
     <button id="startBtn">Commencer l’aventure</button>
   </section>
 
-  <section id="lesson" class="hidden">
-    <h2 id="lessonTitle"></h2>
+ <section id="lesson" class="hidden">
+  <h2 id="lessonTitle"></h2>
 
-    <!-- Zone où le code sera injecté -->
-    <pre id="codeBlock" class="code"></pre>
-    <button id="runBtn">Exécuter</button>
+  <!-- Texte complet (enfants) -->
+  <article id="fullExplanation" class="explain"></article>
 
-      <!-- Nouveau bouton pour passer à la leçon suivante -->
+  <!-- Zone de glisser‑déposer -->
+  <div id="dragArea" class="drag-area" role="list" aria-label="Morceaux de code à réordonner"></div>
+
+  <!-- Bouton de vérification -->
+  <button id="checkBtn" class="hidden">Vérifier</button>
+
+  <!-- Bouton suivant (apparaît après validation) -->
   <button id="nextBtn" class="hidden">Leçon suivante ➜</button>
 
-    <!-- Résultat live -->
-    <div id="preview" class="preview"></div>
-
-    <!-- Explication -->
-    <p id="explanation" class="explain"></p>
-  </section>
+  <!-- Résultat live -->
+  <div id="preview" class="preview"></div>
+</section>
 
   <script src="script.js"></script>
 </body>
