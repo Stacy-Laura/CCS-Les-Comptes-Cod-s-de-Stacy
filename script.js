@@ -213,69 +213,77 @@ const lessons = [
   },
 
   /* ==================== LEÇON 8 ==================== */
-  {
-    title: "Niveau 8 – Flexbox (mise en page simple)",
-    fullExplanation: `
-      <p>Flexbox est un outil puissant qui permet d’aligner facilement des éléments côte à côte, même quand la taille de l’écran change.</p>
+{
+  title: "Niveau 8 – Flexbox (mise en page simple)",
+  fullExplanation: `
+    <p>Flexbox est un outil puissant qui permet d’aligner facilement des éléments côte à côte, même quand la taille de l’écran change.</p>
 
-      <p>Dans cet exercice, on crée deux « cartes » colorées qui se placent l’une à côté de l’autre avec un petit espace entre elles.</p>
+    <p>Dans cet exercice, on crée deux « cartes » colorées qui se placent l’une à côté de l’autre avec un petit espace entre elles.</p>
 
-      <p>Le code final ressemble à :</p>
-      <pre><code>&lt;div style="display:flex; gap:10px;"&gt;
+    <p>Le code final ressemble à :</p>
+    <pre><code>&lt;div style="display:flex; gap:10px;"&gt;
   &lt;div style="background:var(--c2); padding:10px;"&gt;Carte 1&lt;/div&gt;
   &lt;div style="background:var(--c3); padding:10px;"&gt;Carte 2&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-      <p>Les morceaux sont mélangés ; réassemble‑les, puis clique sur <strong>Vérifier</strong>. 
-      Si tout est correct, les deux cartes apparaîtront côte à côte dans la prévisualisation. 
-      Essaie de redimensionner la fenêtre : Flexbox s’adapte tout seul ! 🎨</p>
-    `,
-    codeParts: [
-      "display:flex;",
-      "gap:10px;",
-      "background:var(--c2);",
-      "padding:10px;",
-      "Carte 1",
-      "background:var(--c3);",
-      "Carte 2"
-    ],
-    orderedCode: `<div style="display:flex; gap:10px;"><div style="background:var(--c2); padding:10px;">Carte 1</div><div style="background:var(--c3); padding:10px;">Carte 2</div></div>`
-  },
+    <p>Les morceaux sont mélangés ; réassemble‑les, puis clique sur <strong>Vérifier</strong>.  
+    Si tout est correct, les deux cartes apparaîtront côte à côte dans la prévisualisation.  
+    Essaie de redimensionner la fenêtre : Flexbox s’adapte tout seul ! 🎨</p>
+  `,
 
-  /* ==================== LEÇON 9 ==================== */
-  {
-    title: "Niveau 9 – CSS Grid (grille 2 × 2)",
-    fullExplanation: `
-      <p>CSS Grid est une autre façon de disposer les éléments, idéale quand on veut créer des tableaux ou des grilles.</p>
+  codeParts: [
+    "&lt;div style=\"display:flex; gap:10px;\"&gt;",   // ouverture du conteneur Flexbox
+    "&lt;div style=\"background:var(--c2); padding:10px;\"&gt;", // première carte (ouverture)
+    "Carte 1",                                         // texte de la première carte
+    "&lt;/div&gt;",                                     // fermeture première carte
+    "&lt;div style=\"background:var(--c3); padding:10px;\"&gt;", // deuxième carte (ouverture)
+    "Carte 2",                                         // texte de la deuxième carte
+    "&lt;/div&gt;",                                     // fermeture deuxième carte
+    "&lt;/div&gt;"                                      // fermeture du conteneur Flexbox
+  ],
+  orderedCode: `<div style="display:flex; gap:10px;"><div style="background:var(--c2); padding:10px;">Carte 1</div><div style="background:var(--c3); padding:10px;">Carte 2</div></div>`
+},
 
-      <p>Nous allons construire une petite grille de deux colonnes et deux lignes : quatre carrés numérotés A, B, C et D.</p>
+/* ==================== LEÇON 9 ==================== */
+{
+  title: "Niveau 9 – CSS Grid (grille 2 × 2)",
+  fullExplanation: `
+    <p>CSS Grid est une autre façon de disposer les éléments, idéale quand on veut créer des tableaux ou des grilles.</p>
 
-      <p>Le code attendu :</p>
-      <pre><code>&lt;div style="display:grid; grid-template-columns:1fr 1fr; gap:5px;"&gt;
+    <p>Nous allons construire une petite grille de deux colonnes et deux lignes : quatre carrés numérotés A, B, C et D.</p>
+
+    <p>Le code attendu :</p>
+    <pre><code>&lt;div style="display:grid; grid-template-columns:1fr 1fr; gap:5px;"&gt;
   &lt;div style="background:var(--c4); padding:10px;"&gt;A&lt;/div&gt;
   &lt;div style="background:var(--c5); padding:10px;"&gt;B&lt;/div&gt;
   &lt;div style="background:var(--c6); padding:10px;"&gt;C&lt;/div&gt;
   &lt;div style="background:var(--c1); padding:10px;"&gt;D&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-      <p>Réordonne les morceaux, clique sur <strong>Vérifier</strong>. 
-      Quand c’est bon, la grille apparaîtra : chaque case aura sa couleur et sera bien alignée.</p>
-    `,
-    codeParts: [
-      "display:grid;",
-      "grid-template-columns:1fr 1fr;",
-      "gap:5px;",
-      "background:var(--c4);",
-      "background:var(--c5);",
-      "background:var(--c6);",
-      "background:var(--c1);",
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    orderedCode: `<div style="display:grid; grid-template-columns:1fr 1fr; gap:5px;"><div style="background:var(--c4); padding:10px;">A</div><div style="background:var(--c5); padding:10px;">B</div><div style="background:var(--c6); padding:10px;">C</div><div style="background:var(--c1); padding:10px;">D</div></div>`
-  },
+    <p>Réordonne les morceaux, clique sur <strong>Vérifier</strong>.  
+    Quand c’est bon, la grille apparaîtra : chaque case aura sa couleur et sera bien alignée.</p>
+  `,
+  /* Chaque fragment représente une partie du code que l’élève doit placer.
+     En les découpant ainsi, le mécanisme de drag‑&‑drop (ou les flèches) peut
+     recomposer exactement le HTML attendu. */
+  codeParts: [
+    "&lt;div style=\"display:grid; grid-template-columns:1fr 1fr; gap:5px;\"&gt;", // ouverture du conteneur Grid
+    "&lt;div style=\"background:var(--c4); padding:10px;\"&gt;",               // ouverture de la case A
+    "A",                                                                      // contenu de la case A
+    "&lt;/div&gt;",                                                             // fermeture de la case A
+    "&lt;div style=\"background:var(--c5); padding:10px;\"&gt;",               // ouverture de la case B
+    "B",                                                                      // contenu de la case B
+    "&lt;/div&gt;",                                                             // fermeture de la case B
+    "&lt;div style=\"background:var(--c6); padding:10px;\"&gt;",               // ouverture de la case C
+    "C",                                                                      // contenu de la case C
+    "&lt;/div&gt;",                                                             // fermeture de la case C
+    "&lt;div style=\"background:var(--c1); padding:10px;\"&gt;",               // ouverture de la case D
+    "D",                                                                      // contenu de la case D
+    "&lt;/div&gt;",                                                             // fermeture de la case D
+    "&lt;/div&gt;"                                                              // fermeture du conteneur Grid
+  ],
+  orderedCode: `<div style="display:grid; grid-template-columns:1fr 1fr; gap:5px;"><div style="background:var(--c4); padding:10px;">A</div><div style="background:var(--c5); padding:10px;">B</div><div style="background:var(--c6); padding:10px;">C</div><div style="background:var(--c1); padding:10px;">D</div></div>`
+},
 
   /* ==================== LEÇON 10 ==================== */
   {
@@ -324,6 +332,7 @@ const lessons = [
 
 /* --------- VARIABLES GLOBALES --------- */
 let current = -1;
+let selectedTile = null;
 const welcome = document.getElementById('welcome');
 const lessonSection = document.getElementById('lesson');
 const lessonTitle = document.getElementById('lessonTitle');
@@ -334,7 +343,18 @@ const nextBtn = document.getElementById('nextBtn');
 const preview = document.getElementById('preview');
 const startBtn = document.getElementById('startBtn');
 const autoReadToggle = document.getElementById('autoRead');
-
+window.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    // On cherche quel bouton est affiché pour cliquer sur le bon
+    if (!welcome.classList.contains('hidden')) {
+      startBtn.click();
+    } else if (!checkBtn.classList.contains('hidden')) {
+      checkBtn.click();
+    } else if (!nextBtn.classList.contains('hidden')) {
+      nextBtn.click();
+    }
+  }
+});
 // Fonction pour lire le texte
 function speak(text) {
   if ('speechSynthesis' in window) {
@@ -356,6 +376,22 @@ function shuffle(array) {
 // Retourne un tableau ordonné de toutes les tuiles présentes dans #dragArea
 function getTiles() {
   return Array.from(dragArea.querySelectorAll('.tile'));
+}
+
+function selectTile(tile) {
+  // désélectionner l’ancienne
+  if (selectedTile) selectedTile.classList.remove('selected');
+  // sélectionner la nouvelle
+  selectedTile = tile;
+  tile.classList.add('selected');
+  tile.focus();                 // assure le focus clavier
+  updateAllArrows();            // rafraîchit l’état de chaque flèche
+}
+
+function deselectAll() {
+  if (selectedTile) selectedTile.classList.remove('selected');
+  selectedTile = null;
+  updateAllArrows();
 }
 
 // Déplace une tuile d'un index à un autre (indexTarget = position désirée)
@@ -404,7 +440,7 @@ function renderDragTiles(parts) {
     const tile = document.createElement('div');
     tile.className = 'tile';
     tile.draggable = true;
-    tile.tabIndex = 0;                     // rend la tuile focusable
+    tile.tabIndex = -1;                     // rend la tuile focusable
     tile.innerHTML = txt;                  // le fragment de code
     tile.dataset.code = txt;
 
@@ -436,28 +472,26 @@ function renderDragTiles(parts) {
     tile.addEventListener('focus', () => updateArrowState(tile));
     tile.addEventListener('blur', () => resetArrowState(tile));
 
-/* ----- Clic sur les flèches ----- */
-    leftBtn.addEventListener('click', e => {
-      e.stopPropagation();
-      const tiles = getTiles();
-      const idx = tiles.indexOf(tile);
-      if (idx > 0) {
-        moveTile(tile, idx - 1);
-        tile.focus(); // Garder le focus pour continuer au clavier
-        getTiles().forEach(updateArrowState);
-      }
-    });
+leftBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  const idx = getTiles().indexOf(tile);
+  if (idx > 0) {
+    moveTile(tile, idx - 1);
+    selectTile(tile);               // garder la même tuile sélectionnée
+  }
+});
 
-    rightBtn.addEventListener('click', e => {
-      e.stopPropagation();
-      const tiles = getTiles();
-      const idx = tiles.indexOf(tile);
-      if (idx < tiles.length - 1) {
-        moveTile(tile, idx + 1);
-        tile.focus();
-        getTiles().forEach(updateArrowState);
-      }
-    });
+rightBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  const idx = getTiles().indexOf(tile);
+  if (idx < getTiles().length - 1) {
+    moveTile(tile, idx + 1);
+    selectTile(tile);
+  }
+});
+
+tile.addEventListener('click', () => selectTile(tile));
+
     /* ----- Drag‑and‑Drop natif (déplacement à la souris) ----- */
     tile.addEventListener('dragstart', () => tile.classList.add('dragging'));
     tile.addEventListener('dragend', () => tile.classList.remove('dragging'));
@@ -553,19 +587,56 @@ nextBtn.addEventListener('click', nextLesson);
 
 // Gestion globale du clavier sur le dragArea
 dragArea.addEventListener('keydown', e => {
-  const focused = document.activeElement;
-  if (!focused.classList.contains('tile')) return;
+  const tiles = getTiles();
+  if (tiles.length === 0) return;
 
-  if (e.key === 'ArrowLeft') {
-    e.preventDefault();
-    const idx = getTiles().indexOf(focused);
-    if (idx > 0) moveTile(focused, idx - 1);
-    updateArrowState(focused);
-  } else if (e.key === 'ArrowRight') {
-    e.preventDefault();
-    const idx = getTiles().indexOf(focused);
-    if (idx < getTiles().length - 1) moveTile(focused, idx + 1);
-    updateArrowState(focused);
+  const idx = selectedTile ? tiles.indexOf(selectedTile) : -1;
+
+  switch (e.key) {
+    case 'ArrowUp':
+      e.preventDefault();
+      if (!selectedTile) {
+        // Si rien n'est sélectionné, on prend la PREMIÈRE
+        selectTile(tiles[0]);
+      } else if (idx > 0) {
+        selectTile(tiles[idx - 1]);
+      }
+      break;
+
+    case 'ArrowDown':
+      e.preventDefault();
+      if (!selectedTile) {
+        // Si rien n'est sélectionné, on prend la DERNIÈRE
+        selectTile(tiles[tiles.length - 1]);
+      } else if (idx < tiles.length - 1) {
+        selectTile(tiles[idx + 1]);
+      }
+      break;
+
+    case 'ArrowLeft':
+      e.preventDefault();
+      if (selectedTile && idx > 0) {
+        moveTile(selectedTile, idx - 1);
+        selectedTile.focus(); // On garde le focus après déplacement
+      }
+      break;
+
+    case 'ArrowRight':
+      e.preventDefault();
+      if (selectedTile && idx < tiles.length - 1) {
+        moveTile(selectedTile, idx + 1);
+        selectedTile.focus();
+      }
+      break;
+
+    case 'Escape':
+      e.preventDefault();
+      deselectAll();
+      break;
   }
 });
 
+function updateAllArrows() {
+  const tiles = getTiles();
+  tiles.forEach(t => updateArrowState(t));
+}
